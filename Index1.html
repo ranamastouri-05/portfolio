@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="medal.png" type="image/png">
+    
+        <link rel="stylesheet" href ="style1.css">
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title> Rana's cv </title>
+    </head>
+
+    <body>
+        <h1 class="text-3xl font-bold text-blue-900">Hello, Tailwind!</h1>
+        
+
+        <header> 
+            
+            <nav class="navbar">
+                <div class="links">
+                    <ul class="nav-links">
+                <a class="link" href="https://www.instagram.com/rana_mastouri/">Accueil</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=IXdNnw99-Ic">À propos</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=glEQdzjdwFE">Travail</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=MOenJHdj8ro">CV</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=UzvfkPKqYqU">Contact</a>
+                </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h1> My portfolio</h1>
+            <div class="welcoming">
+                <p>Bienvenue sur mon portfolio personnel !</p>
+            </div>
+
+            <section id="apropos" class= "section">
+                <div class="ragheb">
+                    <h2 class="apr">À propos de moi</h2>
+                    <p class="apr">
+                        hey!Im a new developer and I m learning to improve my skills and hopefully one day i could create a solid website 
+                    </p> 
+                </div>
+                <div class="bt">
+                <img class= "img_apr ragheb" src="profile.jpeg"
+                    alt="Photo de profil"
+                    width="150">
+                    <button class="project-btn"> OPEN TO PROJECT </button>
+                    </div>
+            </section>
+
+            <section id="travail" class="section">
+                <h2>Mes projets</h2>
+
+                <table border="1">
+                    <tr>
+                        <th>Nom du projet</th>
+                        <th>Description</th>
+                        <th>Lien</th>
+                    </tr>
+
+                    <tr>
+                        <td>Mon premier site</td>
+                        <td>Une page web créée avec HTML.</td>
+                        <td><a href="https://firstsite.com">Voir le projet</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Mon portfolio</td>
+                        <td>Un site qui présente mon profil et mes compétences.</td>
+                        <td><a href="https://www.wikipedia.org/   ;nb">Voir le projet</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Mon formulaire</td>
+                        <td>Un formulaire de contact en HTML.</td>
+                        <td><a href="contact">Voir le projet</a></td>
+                    </tr>
+                </table>
+            </section>
+            <!-- <div class="alert alert-primary" role="alert">
+                This is a primary alert—check it out!
+            </div> -->
+
+            <section id="cv" class="section">
+                <h2>Mon CV</h2>
+
+                <p>Téléchargez mon CV en cliquant sur le lien :</p>
+
+                <a href="resume.pdf" download>Télécharger mon CV</a>
+
+                <h3>Une petite présentation vidéo</h3>
+
+                <video width="320" controls>
+                    <source src="oops.mp4" type="video/mp4">
+                    Votre navigateur ne prend pas en charge la vidéo.
+                </video>
+            </section>
+
+            <section class="section">
+                <h2>Contactez-moi</h2>
+
+                <form action="#" method="post">
+
+                    <ul>
+                        <li>
+                            <div>Nom :</div>
+                            <input type="text" name="nom" required>
+                        </li>
+
+                        <li>
+                            <div>Email :</div>
+                            <input type="email" name="email" required>
+                        </li>
+
+                        <li>
+                            <div>Message :</div>
+                            <textarea name="message" rows="5" cols="30" required></textarea>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+
+                </form>
+            </section>
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn-solid theme-primary flex-grow-0" id="liveAlertBtn">Show live alert</button>
+
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+        </footer>
+
+        <script>
+            const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+            const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type}" role="alert">`,
+                `   <p>${message}</p>`,
+                '   <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+            }
+
+            const alertTrigger = document.getElementById('liveAlertBtn')
+            if (alertTrigger) {
+                alertTrigger.addEventListener('click', () => {
+                    appendAlert('Nice, you triggered this alert message!', 'success')
+                })
+            }
+        </script>
+    </body>
+</html>
