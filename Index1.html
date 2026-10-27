@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <link rel="icon" href="medal.png" type="image/png">
     
-        <link rel="stylesheet" href ="style1.css">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <title> Rana's cv </title>
+         <link rel="stylesheet" href ="style1.css"> 
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+         <title>rana's cv</title>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> --> 
     </head>
 
     <body>
-        <h1 class="text-3xl font-bold text-blue-900">Hello, Tailwind!</h1>
+        <!-- <h1 class="text-3xl font-bold text-blue-900">Hello, Tailwind!</h1> -->
         
 
         <header> 
@@ -19,18 +20,22 @@
             <nav class="navbar">
                 <div class="links">
                     <ul class="nav-links">
-                <a class="link" href="https://www.instagram.com/rana_mastouri/">Accueil</a> |
-                <a class="link" href="https://www.youtube.com/watch?v=IXdNnw99-Ic">À propos</a> |
-                <a class="link" href="https://www.youtube.com/watch?v=glEQdzjdwFE">Travail</a> |
-                <a class="link" href="https://www.youtube.com/watch?v=MOenJHdj8ro">CV</a> |
-                <a class="link" href="https://www.youtube.com/watch?v=UzvfkPKqYqU">Contact</a>
+                <a class="link" href="https://www.instagram.com/rana_mastouri/"><i class="fa-solid fa-house"></i>Accueil</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=IXdNnw99-Ic"><i class="fa-solid fa-house"></i>À propos</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=glEQdzjdwFE"><i class="fa-solid fa-briefcase"></i>Travail</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=MOenJHdj8ro"><i class="fa-solid fa-file-lines"></i>CV</a> |
+                <a class="link" href="https://www.youtube.com/watch?v=UzvfkPKqYqU"><i class="fa-solid fa-envelope"></i>Contact</a>
                 </ul>
+                
                 </div>
             </nav>
+            <button id="theme-toggle" type="button" aria-label="Changer de thème">
+                <i class="fa-solid fa-moon"></i> <span>Sombre</span>
+            </button>
         </header>
 
         <main>
-            <h1> My portfolio</h1>
+            <!-- <h1> My portfolio</h1> -->
             <div class="welcoming">
                 <p>Bienvenue sur mon portfolio personnel !</p>
             </div>
@@ -84,21 +89,28 @@
             </div> -->
 
             <section id="cv" class="section">
+                <div class="happy"></div>
                 <h2>Mon CV</h2>
+                <div class="sad">
+                <div class="joy">
 
                 <p>Téléchargez mon CV en cliquant sur le lien :</p>
 
-                <a href="resume.pdf" download>Télécharger mon CV</a>
-
+                <a href="resume.pdf" download>Télécharger mon CV</a> 
+                </div>
+            
+                <div class="happy">
                 <h3>Une petite présentation vidéo</h3>
 
-                <video width="320" controls>
+                <video  width="200" controls>
                     <source src="oops.mp4" type="video/mp4">
                     Votre navigateur ne prend pas en charge la vidéo.
                 </video>
+                </div>
+            </div>
             </section>
 
-            <section class="section">
+            <section id="contact"class="section" >
                 <h2>Contactez-moi</h2>
 
                 <form action="#" method="post">
@@ -126,16 +138,26 @@
 
                 </form>
             </section>
-            <div id="liveAlertPlaceholder"></div>
-            <button type="button" class="btn-solid theme-primary flex-grow-0" id="liveAlertBtn">Show live alert</button>
+           
+            <!-- <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn-solid theme-primary flex-grow-0" id="liveAlertBtn">Show live alert</button> -->
 
         </main>
         
         <footer>
-            <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+           <div class="socials">
+    <a href="https://www.instagram.com/rana_mastouri/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="mailto:you@email.com"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+  <p>&copy; 2026 Mon Portfolio. Tous droits réservés.</p>
+</footer>
+
+<button id="to-top" type="button" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></button>
         </footer>
 
-        <script>
+        <!-- <script>
             const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
             const appendAlert = (message, type) => {
             const wrapper = document.createElement('div')
@@ -155,6 +177,6 @@
                     appendAlert('Nice, you triggered this alert message!', 'success')
                 })
             }
-        </script>
+        </script> -->
     </body>
 </html>
